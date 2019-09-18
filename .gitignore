@@ -31,3 +31,6 @@ media/
 
 # django migrations
 migrations
+
+#db location
+views/connection.py

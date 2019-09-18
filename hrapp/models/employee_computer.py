@@ -11,8 +11,8 @@ class EmployeeComputer(models.Model):
     computer = models.ForeignKey("Computer", on_delete=models.CASCADE)
 
     class Meta:
-        verbose_name = _("EmployeeComputer")
-        verbose_name_plural = _("EmployeeComputers")
+        verbose_name = ("EmployeeComputer")
+        verbose_name_plural = ("EmployeeComputers")
 
     def __str__(self):
         return self.name
