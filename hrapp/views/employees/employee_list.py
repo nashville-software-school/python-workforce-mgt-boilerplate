@@ -34,7 +34,7 @@ def employee_list(request):
 
                 all_employees.append(employee)
 
-    template = 'hrapp/employees/employees_list.html'
+    template = 'employees/employees_list.html'
     context = {
         'employees': all_employees
     }
