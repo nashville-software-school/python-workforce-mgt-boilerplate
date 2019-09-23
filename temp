@@ -16,9 +16,9 @@
   * `python manage.py makemigrations hrapp`
   * `python manage.py migrate`
 
-* create a superuser for your local version of the app:
+* Create a superuser for your local version of the app:
 
-  * pyman createsuperuser <your_username>
+  * `python manage.py createsuperuser`
 
 * Populate your database with initial data from fixtures files: (_NOTE: every time you run this it will remove exisiting data and repopulate the tables_)
 
