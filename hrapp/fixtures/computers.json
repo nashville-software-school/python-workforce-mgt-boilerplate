@@ -25,5 +25,14 @@
       "purchase_date": "2012-10-20",
       "decommission_date": "2014-04-05"
     }
+  },
+  {
+    "model": "hrapp.computer",
+    "pk": 4,
+    "fields": {
+      "make": "Apple MacBook Glow",
+      "purchase_date": "2014-10-20",
+      "decommission_date": null
+    }
   }
 ]
