@@ -1,0 +1,13 @@
+[
+  {
+    "model": "hrapp.employee",
+    "pk":1,
+    "fields": {
+      "first_name": "Quokka",
+      "last_name": "McDougal",
+      "start_date": "2012-07-29",
+      "is_supervisor": false,
+      "department": 1
+    }
+  }
+]

@@ -1,0 +1,10 @@
+[
+  {
+    "model": "hrapp.department",
+    "pk": 1,
+    "fields": {
+      "name": "Department of Redundancy Department",
+      "budget": 345908
+    }
+  }
+]
