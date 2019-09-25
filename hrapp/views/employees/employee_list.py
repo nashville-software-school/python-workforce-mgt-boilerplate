@@ -16,8 +16,13 @@ def employee_list(request):
                 e.first_name,
                 e.last_name,
                 e.start_date,
-                e.is_supervisor
+                e.is_supervisor,
+                c.make computer
             from hrapp_employee e
+            left join hrapp_employeecomputer ec
+            on ec.employee_id == e.id
+            left join hrapp_computer c
+            on ec.computer_id == c.id
             """)
 
             all_employees = []
@@ -30,6 +35,7 @@ def employee_list(request):
                 employee.last_name = row['last_name']
                 employee.start_date = row['start_date']
                 employee.is_supervisor = row['is_supervisor']
+                employee.current_computer = row['computer']
                 # employee.department = row['department']
 
                 all_employees.append(employee)
