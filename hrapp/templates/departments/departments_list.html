@@ -1,0 +1,14 @@
+{% extends 'shared/base.html' %}
+
+{% block content %}
+<h1>Departments</h1>
+
+<ol>
+{% for department in departments %}
+    <li>
+        <p>{{ department.name }}</p>
+        supervisor: {% firstof department.supervisor "None. The inmates run the asylum" %}
+    </li>
+{% endfor %}
+</ol>
+{% endblock content %}
