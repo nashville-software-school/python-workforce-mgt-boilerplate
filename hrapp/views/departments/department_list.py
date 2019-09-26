@@ -10,17 +10,20 @@ def department_list(request):
             conn.row_factory = sqlite3.Row
             db_cursor = conn.cursor()
 
+            # and e.is_supervisor == 1
             db_cursor.execute("""
             select
                 d.id,
                 d.name,
                 d.budget,
                 e.first_name,
-                e.last_name
+                e.last_name,
+                e.is_supervisor,
+                count(e.id) employee_count
             from hrapp_department d
             left join hrapp_employee e
             on e.department_id == d.id
-            and e.is_supervisor == 1
+            group by d.id
             """)
 
             all_departments = []
@@ -31,7 +34,8 @@ def department_list(request):
                 department.id = row['id']
                 department.name = row['name']
                 department.budget = row['budget']
-                if row['first_name'] is not None:
+                department.size = row['employee_count']
+                if row['is_supervisor']:
                     department.supervisor = f"{row['first_name']} {row['last_name']}"
 
                 all_departments.append(department)
