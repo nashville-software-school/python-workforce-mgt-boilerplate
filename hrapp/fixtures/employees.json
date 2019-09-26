@@ -9,5 +9,27 @@
       "is_supervisor": false,
       "department": 1
     }
+  },
+  {
+    "model": "hrapp.employee",
+    "pk":2,
+    "fields": {
+      "first_name": "Shem",
+      "last_name": "Flipperman",
+      "start_date": "2018-05-29",
+      "is_supervisor": false,
+      "department": 1
+    }
+  },
+  {
+    "model": "hrapp.employee",
+    "pk":3,
+    "fields": {
+      "first_name": "Sandra",
+      "last_name": "Dayo",
+      "start_date": "2007-05-08",
+      "is_supervisor": true,
+      "department": 1
+    }
   }
 ]
