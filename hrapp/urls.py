@@ -3,6 +3,7 @@ from django.conf.urls import include
 from hrapp import views
 from .views import *
 
+
 app_name = 'hrapp'
 urlpatterns = [
     path('', home, name='home'),
@@ -11,4 +12,6 @@ urlpatterns = [
     path('employees/', employee_list, name='employee_list'),
     path('computers/', computer_list, name='computer_list'),
     path('departments/', department_list, name='department_list'),
+    path('photos/', photo_list, name='photos'),
+    path('photos/form', photo_form, name='photo_form')
 ]

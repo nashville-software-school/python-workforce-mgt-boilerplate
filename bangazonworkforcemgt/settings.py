@@ -121,3 +121,9 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 LOGIN_REDIRECT_URL = '/employees'
+
+# For image uploads
+# MEDIA_ROOT is for server path to store files in the computer.
+# MEDIA_URL is the reference URL for browser to access the files over Http.
+MEDIA_ROOT =  os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
