@@ -6,10 +6,10 @@ from ..forms import PhotoForm
 # @login_required
 def photo_form(request):
     if request.method == 'GET':
-        upload_form = PhotoForm()
+        upload_field = PhotoForm()
         template = 'photos/form.html'
         context = {
-            'upload_form': upload_form
+            'upload_field': upload_field
         }
 
         return render(request, template, context)
